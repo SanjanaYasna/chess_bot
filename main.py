@@ -42,4 +42,9 @@ if __name__ == "__main__":
     #while moves sitll valid, we alternate between black and white 
     while not board.is_check() and not board.is_stalemate(): 
         game_iter() 
-    
+        
+#1. have it alternate between moves (take move input, and output someething of the other side) <- Nargiz
+    # By Sunday
+#2. Have the bot refine its moves to be capture instead of random legal moves <- Teetly 
+    # By Monday 
+     
