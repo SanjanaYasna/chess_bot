@@ -21,7 +21,7 @@ The program ends in the case of a draw or one side winning.
 
 testing.py contains two tests for two bots playing against each other.
 
-test_both_greedy_bots() tests two bots that both prioritize capture moves against each other. As you'd imagine, there is a very high chance they run into a stalemate due to insufficient material, and we assert that this is the outcome. Example outcome in two_greedy_bots.txt
+test_both_greedy_bots() tests two bots that both prioritize capture moves against each other. As you'd imagine, there is a very high chance they run into a stalemate due to insufficient material, and we assert that this is the outcome. Example outcome in examples/two_greedy_bots.txt
 
-test_greedy_random_bot() has one bot prioritize capture (we call greedy), the other select any legal move. This one has a wider range of likely outcome, but usually the bot that captures then checkmates. Example outcome where first game black is greedy, next game white is greedy is in one_greedy_other_random_bots.txt
+test_greedy_random_bot() has one bot prioritize capture (we call greedy), the other select any legal move. This one has a wider range of likely outcome, but usually the bot that captures then checkmates. Example outcome where first game black is greedy, next game white is greedy is in examples/one_greedy_other_random_bots.txt
 
