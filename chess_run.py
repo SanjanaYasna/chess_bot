@@ -7,19 +7,14 @@ Original file is located at
     https://colab.research.google.com/drive/1PIAorBNQs7H5usjQRajv-NTD6O91V0vk
 """
 
-pip install chess
-
 import chess
-
 board = chess.Board()
 
-print(board.legal_moves)
+# print(board.legal_moves)
 
 import sys
 import random
 from datetime import datetime
-
-import chess
 
 
 def print_board(board: chess.Board) -> None:
@@ -76,26 +71,80 @@ def prompt_user_move(board: chess.Board) -> chess.Move:
             return mv
         print("Illegal move in this position. Try again.")
 
-
+#returns num in case we want to assert a certain outcome
 def announce_game_over(board: chess.Board) -> None:
     if board.is_checkmate():
         winner = "white" if board.turn == chess.BLACK else "black"
         print(f"Checkmate. {winner.capitalize()} wins.")
-        return
+        return 1
     if board.is_stalemate():
         print("Draw by stalemate.")
-        return
+        return 2
     if board.is_insufficient_material():
         print("Draw by insufficient material.")
-        return
+        return 3
     if board.is_seventyfive_moves():
         print("Draw by 75-move rule.")
-        return
+        return 4
     if board.is_fivefold_repetition():
         print("Draw by fivefold repetition.")
-        return
+        return 5
     print("Game over.")
+    
+def run_game_two_bots_greedy_vs_random(board: chess.Board, greedy_color: chess.Color) -> None:
+    while True:
+        if board.is_game_over():
+            num_outcome = announce_game_over(board)
+            return num_outcome
+        #white bot
+        if board.turn == chess.WHITE:
+            if greedy_color != chess.WHITE:
+                legal = list(board.legal_moves)
+                if not legal:
+                    raise RuntimeError("No legal moves available.")
+                mv = random.choice(legal)
+                print(f"Bot 1, any legal move (as white): {mv.uci()}")
+                board.push(mv)
+            else:
+                #if it is greedy, it choosees the capture moves specificially
+                mv = choose_bot_move(board)
+                print(f"Bot 1, prioritizes capture (as white): {mv.uci()}")
+                board.push(mv)
+        else:
+            if greedy_color != chess.BLACK:
+                legal = list(board.legal_moves)
+                if not legal:
+                    raise RuntimeError("No legal moves available.")
+                mv = random.choice(legal)
+                print(f"Bot 2, any legal move (as black): {mv.uci()}")
+                board.push(mv)
+            else:
+                mv = choose_bot_move(board)
+                print(f"Bot 2, prioritizes capture (as black): {mv.uci()}")
+                board.push(mv)
+        prints(board)
+        continue
 
+def prints(board):
+    print_fen(board)
+    print_board(board)
+#both bots do capture move, print not only fen but also current board state for visibility
+def run_game_two_bots_greedy(board: chess.Board) -> None:
+    while True:
+        if board.is_game_over():
+            num_outcome = announce_game_over(board)
+            return num_outcome
+        #white bot
+        if board.turn == chess.WHITE:
+            mv = choose_bot_move(board)
+            print(f"Bot 1 (as white): {mv.uci()}")
+            board.push(mv)
+        else:
+            mv = choose_bot_move(board)
+            print(f"Bot 2 (as black): {mv.uci()}")
+            board.push(mv)
+        prints(board)
+        continue
 
 def run_game(board: chess.Board, bot_color: chess.Color) -> None:
     while True:
@@ -108,14 +157,26 @@ def run_game(board: chess.Board, bot_color: chess.Color) -> None:
             print(f"Bot (as {side_name(bot_color)}): {mv.uci()}")
             board.push(mv)
             print_fen(board)
+            #print_board(board)
             continue
 
         user_mv = prompt_user_move(board)
         board.push(user_mv)
         print_fen(board)
+      #  print_board(board)
 
 
+def print_board(board):
+    print("\nCurrent Board Position:")
+    print("----------------------")
+    print(board)
+    print("----------------------\n")
+    
 def main() -> None:
+    print("Just in case we need teh header:")
+    print("=====================================================")
+    print("             CS 290 Chess Bot Version 0.1            ")
+    print("=====================================================")
     print(f"Time: {datetime.now()}")
     print("Computer Player? (w=white/b=black):")
     user_color_in = input().strip().lower()
@@ -135,7 +196,7 @@ def main() -> None:
             board.set_fen(chess.STARTING_FEN)
     else:
         board.set_fen(chess.STARTING_FEN)
-
+    #print_board(board)
     run_game(board, bot_color)
 
 
@@ -143,4 +204,4 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\nInterrupted. Bye.")
+        print("\nInterrupted. Play again soon.")

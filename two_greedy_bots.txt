@@ -1,0 +1,1619 @@
+
+Current Board Position:
+----------------------
+r n b q k b n r
+p p p p p p p p
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+P P P P P P P P
+R N B Q K B N R
+----------------------
+
+Bot 1 (as white): f2f3
+New FEN position: rnbqkbnr/pppppppp/8/8/8/5P2/PPPPP1PP/RNBQKBNR b KQkq - 0 1
+
+Current Board Position:
+----------------------
+r n b q k b n r
+p p p p p p p p
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . P . .
+P P P P P . P P
+R N B Q K B N R
+----------------------
+
+Bot 2 (as black): c7c5
+New FEN position: rnbqkbnr/pp1ppppp/8/2p5/8/5P2/PPPPP1PP/RNBQKBNR w KQkq - 0 2
+
+Current Board Position:
+----------------------
+r n b q k b n r
+p p . p p p p p
+. . . . . . . .
+. . p . . . . .
+. . . . . . . .
+. . . . . P . .
+P P P P P . P P
+R N B Q K B N R
+----------------------
+
+Bot 1 (as white): e2e3
+New FEN position: rnbqkbnr/pp1ppppp/8/2p5/8/4PP2/PPPP2PP/RNBQKBNR b KQkq - 0 2
+
+Current Board Position:
+----------------------
+r n b q k b n r
+p p . p p p p p
+. . . . . . . .
+. . p . . . . .
+. . . . . . . .
+. . . . P P . .
+P P P P . . P P
+R N B Q K B N R
+----------------------
+
+Bot 2 (as black): a7a6
+New FEN position: rnbqkbnr/1p1ppppp/p7/2p5/8/4PP2/PPPP2PP/RNBQKBNR w KQkq - 0 3
+
+Current Board Position:
+----------------------
+r n b q k b n r
+. p . p p p p p
+p . . . . . . .
+. . p . . . . .
+. . . . . . . .
+. . . . P P . .
+P P P P . . P P
+R N B Q K B N R
+----------------------
+
+Bot 1 (as white): f1a6
+New FEN position: rnbqkbnr/1p1ppppp/B7/2p5/8/4PP2/PPPP2PP/RNBQK1NR b KQkq - 0 3
+
+Current Board Position:
+----------------------
+r n b q k b n r
+. p . p p p p p
+B . . . . . . .
+. . p . . . . .
+. . . . . . . .
+. . . . P P . .
+P P P P . . P P
+R N B Q K . N R
+----------------------
+
+Bot 2 (as black): b7a6
+New FEN position: rnbqkbnr/3ppppp/p7/2p5/8/4PP2/PPPP2PP/RNBQK1NR w KQkq - 0 4
+
+Current Board Position:
+----------------------
+r n b q k b n r
+. . . p p p p p
+p . . . . . . .
+. . p . . . . .
+. . . . . . . .
+. . . . P P . .
+P P P P . . P P
+R N B Q K . N R
+----------------------
+
+Bot 1 (as white): d2d3
+New FEN position: rnbqkbnr/3ppppp/p7/2p5/8/3PPP2/PPP3PP/RNBQK1NR b KQkq - 0 4
+
+Current Board Position:
+----------------------
+r n b q k b n r
+. . . p p p p p
+p . . . . . . .
+. . p . . . . .
+. . . . . . . .
+. . . P P P . .
+P P P . . . P P
+R N B Q K . N R
+----------------------
+
+Bot 2 (as black): d8c7
+New FEN position: rnb1kbnr/2qppppp/p7/2p5/8/3PPP2/PPP3PP/RNBQK1NR w KQkq - 1 5
+
+Current Board Position:
+----------------------
+r n b . k b n r
+. . q p p p p p
+p . . . . . . .
+. . p . . . . .
+. . . . . . . .
+. . . P P P . .
+P P P . . . P P
+R N B Q K . N R
+----------------------
+
+Bot 1 (as white): g2g4
+New FEN position: rnb1kbnr/2qppppp/p7/2p5/6P1/3PPP2/PPP4P/RNBQK1NR b KQkq - 0 5
+
+Current Board Position:
+----------------------
+r n b . k b n r
+. . q p p p p p
+p . . . . . . .
+. . p . . . . .
+. . . . . . P .
+. . . P P P . .
+P P P . . . . P
+R N B Q K . N R
+----------------------
+
+Bot 2 (as black): c7h2
+New FEN position: rnb1kbnr/3ppppp/p7/2p5/6P1/3PPP2/PPP4q/RNBQK1NR w KQkq - 0 6
+
+Current Board Position:
+----------------------
+r n b . k b n r
+. . . p p p p p
+p . . . . . . .
+. . p . . . . .
+. . . . . . P .
+. . . P P P . .
+P P P . . . . q
+R N B Q K . N R
+----------------------
+
+Bot 1 (as white): h1h2
+New FEN position: rnb1kbnr/3ppppp/p7/2p5/6P1/3PPP2/PPP4R/RNBQK1N1 b Qkq - 0 6
+
+Current Board Position:
+----------------------
+r n b . k b n r
+. . . p p p p p
+p . . . . . . .
+. . p . . . . .
+. . . . . . P .
+. . . P P P . .
+P P P . . . . R
+R N B Q K . N .
+----------------------
+
+Bot 2 (as black): f7f6
+New FEN position: rnb1kbnr/3pp1pp/p4p2/2p5/6P1/3PPP2/PPP4R/RNBQK1N1 w Qkq - 0 7
+
+Current Board Position:
+----------------------
+r n b . k b n r
+. . . p p . p p
+p . . . . p . .
+. . p . . . . .
+. . . . . . P .
+. . . P P P . .
+P P P . . . . R
+R N B Q K . N .
+----------------------
+
+Bot 1 (as white): h2h7
+New FEN position: rnb1kbnr/3pp1pR/p4p2/2p5/6P1/3PPP2/PPP5/RNBQK1N1 b Qkq - 0 7
+
+Current Board Position:
+----------------------
+r n b . k b n r
+. . . p p . p R
+p . . . . p . .
+. . p . . . . .
+. . . . . . P .
+. . . P P P . .
+P P P . . . . .
+R N B Q K . N .
+----------------------
+
+Bot 2 (as black): h8h7
+New FEN position: rnb1kbn1/3pp1pr/p4p2/2p5/6P1/3PPP2/PPP5/RNBQK1N1 w Qq - 0 8
+
+Current Board Position:
+----------------------
+r n b . k b n .
+. . . p p . p r
+p . . . . p . .
+. . p . . . . .
+. . . . . . P .
+. . . P P P . .
+P P P . . . . .
+R N B Q K . N .
+----------------------
+
+Bot 1 (as white): b1c3
+New FEN position: rnb1kbn1/3pp1pr/p4p2/2p5/6P1/2NPPP2/PPP5/R1BQK1N1 b Qq - 1 8
+
+Current Board Position:
+----------------------
+r n b . k b n .
+. . . p p . p r
+p . . . . p . .
+. . p . . . . .
+. . . . . . P .
+. . N P P P . .
+P P P . . . . .
+R . B Q K . N .
+----------------------
+
+Bot 2 (as black): b8c6
+New FEN position: r1b1kbn1/3pp1pr/p1n2p2/2p5/6P1/2NPPP2/PPP5/R1BQK1N1 w Qq - 2 9
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . n . . p . .
+. . p . . . . .
+. . . . . . P .
+. . N P P P . .
+P P P . . . . .
+R . B Q K . N .
+----------------------
+
+Bot 1 (as white): a2a4
+New FEN position: r1b1kbn1/3pp1pr/p1n2p2/2p5/P5P1/2NPPP2/1PP5/R1BQK1N1 b Qq - 0 9
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . n . . p . .
+. . p . . . . .
+P . . . . . P .
+. . N P P P . .
+. P P . . . . .
+R . B Q K . N .
+----------------------
+
+Bot 2 (as black): f6f5
+New FEN position: r1b1kbn1/3pp1pr/p1n5/2p2p2/P5P1/2NPPP2/1PP5/R1BQK1N1 w Qq - 0 10
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . n . . . . .
+. . p . . p . .
+P . . . . . P .
+. . N P P P . .
+. P P . . . . .
+R . B Q K . N .
+----------------------
+
+Bot 1 (as white): g4f5
+New FEN position: r1b1kbn1/3pp1pr/p1n5/2p2P2/P7/2NPPP2/1PP5/R1BQK1N1 b Qq - 0 10
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . n . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P P . .
+. P P . . . . .
+R . B Q K . N .
+----------------------
+
+Bot 2 (as black): c6e5
+New FEN position: r1b1kbn1/3pp1pr/p7/2p1nP2/P7/2NPPP2/1PP5/R1BQK1N1 w Qq - 1 11
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . . . . . . .
+. . p . n P . .
+P . . . . . . .
+. . N P P P . .
+. P P . . . . .
+R . B Q K . N .
+----------------------
+
+Bot 1 (as white): a1b1
+New FEN position: r1b1kbn1/3pp1pr/p7/2p1nP2/P7/2NPPP2/1PP5/1RBQK1N1 b q - 2 11
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . . . . . . .
+. . p . n P . .
+P . . . . . . .
+. . N P P P . .
+. P P . . . . .
+. R B Q K . N .
+----------------------
+
+Bot 2 (as black): e5f3
+New FEN position: r1b1kbn1/3pp1pr/p7/2p2P2/P7/2NPPn2/1PP5/1RBQK1N1 w q - 0 12
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P n . .
+. P P . . . . .
+. R B Q K . N .
+----------------------
+
+Bot 1 (as white): d1f3
+New FEN position: r1b1kbn1/3pp1pr/p7/2p2P2/P7/2NPPQ2/1PP5/1RB1K1N1 b q - 0 12
+
+Current Board Position:
+----------------------
+r . b . k b n .
+. . . p p . p r
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P Q . .
+. P P . . . . .
+. R B . K . N .
+----------------------
+
+Bot 2 (as black): a8a7
+New FEN position: 2b1kbn1/r2pp1pr/p7/2p2P2/P7/2NPPQ2/1PP5/1RB1K1N1 w - - 1 13
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p r
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P Q . .
+. P P . . . . .
+. R B . K . N .
+----------------------
+
+Bot 1 (as white): e1d2
+New FEN position: 2b1kbn1/r2pp1pr/p7/2p2P2/P7/2NPPQ2/1PPK4/1RB3N1 b - - 2 13
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p r
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P Q . .
+. P P K . . . .
+. R B . . . N .
+----------------------
+
+Bot 2 (as black): h7h2
+New FEN position: 2b1kbn1/r2pp1p1/p7/2p2P2/P7/2NPPQ2/1PPK3r/1RB3N1 w - - 3 14
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p .
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P Q . .
+. P P K . . . r
+. R B . . . N .
+----------------------
+
+Bot 1 (as white): f3f2
+New FEN position: 2b1kbn1/r2pp1p1/p7/2p2P2/P7/2NPP3/1PPK1Q1r/1RB3N1 b - - 4 14
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p .
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P . . .
+. P P K . Q . r
+. R B . . . N .
+----------------------
+
+Bot 2 (as black): h2f2
+New FEN position: 2b1kbn1/r2pp1p1/p7/2p2P2/P7/2NPP3/1PPK1r2/1RB3N1 w - - 0 15
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p .
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P . . .
+. P P K . r . .
+. R B . . . N .
+----------------------
+
+Bot 1 (as white): g1e2
+New FEN position: 2b1kbn1/r2pp1p1/p7/2p2P2/P7/2NPP3/1PPKNr2/1RB5 b - - 1 15
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p .
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P . . .
+. P P K N r . .
+. R B . . . . .
+----------------------
+
+Bot 2 (as black): f2e2
+New FEN position: 2b1kbn1/r2pp1p1/p7/2p2P2/P7/2NPP3/1PPKr3/1RB5 w - - 0 16
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p .
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . N P P . . .
+. P P K r . . .
+. R B . . . . .
+----------------------
+
+Bot 1 (as white): c3e2
+New FEN position: 2b1kbn1/r2pp1p1/p7/2p2P2/P7/3PP3/1PPKN3/1RB5 b - - 0 16
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p p . p .
+p . . . . . . .
+. . p . . P . .
+P . . . . . . .
+. . . P P . . .
+. P P K N . . .
+. R B . . . . .
+----------------------
+
+Bot 2 (as black): e7e5
+New FEN position: 2b1kbn1/r2p2p1/p7/2p1pP2/P7/3PP3/1PPKN3/1RB5 w - e6 0 17
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p . . p .
+p . . . . . . .
+. . p . p P . .
+P . . . . . . .
+. . . P P . . .
+. P P K N . . .
+. R B . . . . .
+----------------------
+
+Bot 1 (as white): f5e6
+New FEN position: 2b1kbn1/r2p2p1/p3P3/2p5/P7/3PP3/1PPKN3/1RB5 b - - 0 17
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . p . . p .
+p . . . P . . .
+. . p . . . . .
+P . . . . . . .
+. . . P P . . .
+. P P K N . . .
+. R B . . . . .
+----------------------
+
+Bot 2 (as black): d7e6
+New FEN position: 2b1kbn1/r5p1/p3p3/2p5/P7/3PP3/1PPKN3/1RB5 w - - 0 18
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . . . . p .
+p . . . p . . .
+. . p . . . . .
+P . . . . . . .
+. . . P P . . .
+. P P K N . . .
+. R B . . . . .
+----------------------
+
+Bot 1 (as white): e2g3
+New FEN position: 2b1kbn1/r5p1/p3p3/2p5/P7/3PP1N1/1PPK4/1RB5 b - - 1 18
+
+Current Board Position:
+----------------------
+. . b . k b n .
+r . . . . . p .
+p . . . p . . .
+. . p . . . . .
+P . . . . . . .
+. . . P P . N .
+. P P K . . . .
+. R B . . . . .
+----------------------
+
+Bot 2 (as black): f8e7
+New FEN position: 2b1k1n1/r3b1p1/p3p3/2p5/P7/3PP1N1/1PPK4/1RB5 w - - 2 19
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . b . p .
+p . . . p . . .
+. . p . . . . .
+P . . . . . . .
+. . . P P . N .
+. P P K . . . .
+. R B . . . . .
+----------------------
+
+Bot 1 (as white): b2b4
+New FEN position: 2b1k1n1/r3b1p1/p3p3/2p5/PP6/3PP1N1/2PK4/1RB5 b - - 0 19
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . b . p .
+p . . . p . . .
+. . p . . . . .
+P P . . . . . .
+. . . P P . N .
+. . P K . . . .
+. R B . . . . .
+----------------------
+
+Bot 2 (as black): c5b4
+New FEN position: 2b1k1n1/r3b1p1/p3p3/8/Pp6/3PP1N1/2PK4/1RB5 w - - 0 20
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . b . p .
+p . . . p . . .
+. . . . . . . .
+P p . . . . . .
+. . . P P . N .
+. . P K . . . .
+. R B . . . . .
+----------------------
+
+Bot 1 (as white): b1b4
+New FEN position: 2b1k1n1/r3b1p1/p3p3/8/PR6/3PP1N1/2PK4/2B5 b - - 0 20
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . b . p .
+p . . . p . . .
+. . . . . . . .
+P R . . . . . .
+. . . P P . N .
+. . P K . . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): e7b4
+New FEN position: 2b1k1n1/r5p1/p3p3/8/Pb6/3PP1N1/2PK4/2B5 w - - 0 21
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . . . p .
+p . . . p . . .
+. . . . . . . .
+P b . . . . . .
+. . . P P . N .
+. . P K . . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): d2e2
+New FEN position: 2b1k1n1/r5p1/p3p3/8/Pb6/3PP1N1/2P1K3/2B5 b - - 1 21
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . . . p .
+p . . . p . . .
+. . . . . . . .
+P b . . . . . .
+. . . P P . N .
+. . P . K . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): b4c5
+New FEN position: 2b1k1n1/r5p1/p3p3/2b5/P7/3PP1N1/2P1K3/2B5 w - - 2 22
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . . . p .
+p . . . p . . .
+. . b . . . . .
+P . . . . . . .
+. . . P P . N .
+. . P . K . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): g3h5
+New FEN position: 2b1k1n1/r5p1/p3p3/2b4N/P7/3PP3/2P1K3/2B5 b - - 3 22
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . . . p .
+p . . . p . . .
+. . b . . . . N
+P . . . . . . .
+. . . P P . . .
+. . P . K . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): c5e3
+New FEN position: 2b1k1n1/r5p1/p3p3/7N/P7/3Pb3/2P1K3/2B5 w - - 0 23
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . . . p .
+p . . . p . . .
+. . . . . . . N
+P . . . . . . .
+. . . P b . . .
+. . P . K . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): e2e3
+New FEN position: 2b1k1n1/r5p1/p3p3/7N/P7/3PK3/2P5/2B5 b - - 0 23
+
+Current Board Position:
+----------------------
+. . b . k . n .
+r . . . . . p .
+p . . . p . . .
+. . . . . . . N
+P . . . . . . .
+. . . P K . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): e8e7
+New FEN position: 2b3n1/r3k1p1/p3p3/7N/P7/3PK3/2P5/2B5 w - - 1 24
+
+Current Board Position:
+----------------------
+. . b . . . n .
+r . . . k . p .
+p . . . p . . .
+. . . . . . . N
+P . . . . . . .
+. . . P K . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): h5g7
+New FEN position: 2b3n1/r3k1N1/p3p3/8/P7/3PK3/2P5/2B5 b - - 0 24
+
+Current Board Position:
+----------------------
+. . b . . . n .
+r . . . k . N .
+p . . . p . . .
+. . . . . . . .
+P . . . . . . .
+. . . P K . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): e7d6
+New FEN position: 2b3n1/r5N1/p2kp3/8/P7/3PK3/2P5/2B5 w - - 1 25
+
+Current Board Position:
+----------------------
+. . b . . . n .
+r . . . . . N .
+p . . k p . . .
+. . . . . . . .
+P . . . . . . .
+. . . P K . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): g7e6
+New FEN position: 2b3n1/r7/p2kN3/8/P7/3PK3/2P5/2B5 b - - 0 25
+
+Current Board Position:
+----------------------
+. . b . . . n .
+r . . . . . . .
+p . . k N . . .
+. . . . . . . .
+P . . . . . . .
+. . . P K . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): c8e6
+New FEN position: 6n1/r7/p2kb3/8/P7/3PK3/2P5/2B5 w - - 0 26
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . k b . . .
+. . . . . . . .
+P . . . . . . .
+. . . P K . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): e3e4
+New FEN position: 6n1/r7/p2kb3/8/P3K3/3P4/2P5/2B5 b - - 1 26
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . k b . . .
+. . . . . . . .
+P . . . K . . .
+. . . P . . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): d6c5
+New FEN position: 6n1/r7/p3b3/2k5/P3K3/3P4/2P5/2B5 w - - 2 27
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . . b . . .
+. . k . . . . .
+P . . . K . . .
+. . . P . . . .
+. . P . . . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): c2c4
+New FEN position: 6n1/r7/p3b3/2k5/P1P1K3/3P4/8/2B5 b - - 0 27
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . . b . . .
+. . k . . . . .
+P . P . K . . .
+. . . P . . . .
+. . . . . . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): e6c4
+New FEN position: 6n1/r7/p7/2k5/P1b1K3/3P4/8/2B5 w - - 0 28
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . . . . . .
+. . k . . . . .
+P . b . K . . .
+. . . P . . . .
+. . . . . . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): d3c4
+New FEN position: 6n1/r7/p7/2k5/P1P1K3/8/8/2B5 b - - 0 28
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . . . . . .
+. . k . . . . .
+P . P . K . . .
+. . . . . . . .
+. . . . . . . .
+. . B . . . . .
+----------------------
+
+Bot 2 (as black): c5c4
+New FEN position: 6n1/r7/p7/8/P1k1K3/8/8/2B5 w - - 0 29
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . . . . . .
+. . . . . . . .
+P . k . K . . .
+. . . . . . . .
+. . . . . . . .
+. . B . . . . .
+----------------------
+
+Bot 1 (as white): c1a3
+New FEN position: 6n1/r7/p7/8/P1k1K3/B7/8/8 b - - 1 29
+
+Current Board Position:
+----------------------
+. . . . . . n .
+r . . . . . . .
+p . . . . . . .
+. . . . . . . .
+P . k . K . . .
+B . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): a7g7
+New FEN position: 6n1/6r1/p7/8/P1k1K3/B7/8/8 w - - 2 30
+
+Current Board Position:
+----------------------
+. . . . . . n .
+. . . . . . r .
+p . . . . . . .
+. . . . . . . .
+P . k . K . . .
+B . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): e4f5
+New FEN position: 6n1/6r1/p7/5K2/P1k5/B7/8/8 b - - 3 30
+
+Current Board Position:
+----------------------
+. . . . . . n .
+. . . . . . r .
+p . . . . . . .
+. . . . . K . .
+P . k . . . . .
+B . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): g8h6
+New FEN position: 8/6r1/p6n/5K2/P1k5/B7/8/8 w - - 4 31
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . r .
+p . . . . . . n
+. . . . . K . .
+P . k . . . . .
+B . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): f5f6
+New FEN position: 8/6r1/p4K1n/8/P1k5/B7/8/8 b - - 5 31
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . r .
+p . . . . K . n
+. . . . . . . .
+P . k . . . . .
+B . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): g7g2
+New FEN position: 8/8/p4K1n/8/P1k5/B7/6r1/8 w - - 6 32
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . . . . K . n
+. . . . . . . .
+P . k . . . . .
+B . . . . . . .
+. . . . . . r .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): a3e7
+New FEN position: 8/4B3/p4K1n/8/P1k5/8/6r1/8 b - - 7 32
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . B . . .
+p . . . . K . n
+. . . . . . . .
+P . k . . . . .
+. . . . . . . .
+. . . . . . r .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): c4d5
+New FEN position: 8/4B3/p4K1n/3k4/P7/8/6r1/8 w - - 8 33
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . B . . .
+p . . . . K . n
+. . . k . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . r .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): a4a5
+New FEN position: 8/4B3/p4K1n/P2k4/8/8/6r1/8 b - - 0 33
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . B . . .
+p . . . . K . n
+P . . k . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . r .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): g2g3
+New FEN position: 8/4B3/p4K1n/P2k4/8/6r1/8/8 w - - 1 34
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . B . . .
+p . . . . K . n
+P . . k . . . .
+. . . . . . . .
+. . . . . . r .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): e7f8
+New FEN position: 5B2/8/p4K1n/P2k4/8/6r1/8/8 b - - 2 34
+
+Current Board Position:
+----------------------
+. . . . . B . .
+. . . . . . . .
+p . . . . K . n
+P . . k . . . .
+. . . . . . . .
+. . . . . . r .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): g3c3
+New FEN position: 5B2/8/p4K1n/P2k4/8/2r5/8/8 w - - 3 35
+
+Current Board Position:
+----------------------
+. . . . . B . .
+. . . . . . . .
+p . . . . K . n
+P . . k . . . .
+. . . . . . . .
+. . r . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): f8h6
+New FEN position: 8/8/p4K1B/P2k4/8/2r5/8/8 b - - 0 35
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . . . . K . B
+P . . k . . . .
+. . . . . . . .
+. . r . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): c3d3
+New FEN position: 8/8/p4K1B/P2k4/8/3r4/8/8 w - - 1 36
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . . . . K . B
+P . . k . . . .
+. . . . . . . .
+. . . r . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): h6f8
+New FEN position: 5B2/8/p4K2/P2k4/8/3r4/8/8 b - - 2 36
+
+Current Board Position:
+----------------------
+. . . . . B . .
+. . . . . . . .
+p . . . . K . .
+P . . k . . . .
+. . . . . . . .
+. . . r . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): d3f3
+New FEN position: 5B2/8/p4K2/P2k4/8/5r2/8/8 w - - 3 37
+
+Current Board Position:
+----------------------
+. . . . . B . .
+. . . . . . . .
+p . . . . K . .
+P . . k . . . .
+. . . . . . . .
+. . . . . r . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): f6g7
+New FEN position: 5B2/6K1/p7/P2k4/8/5r2/8/8 b - - 4 37
+
+Current Board Position:
+----------------------
+. . . . . B . .
+. . . . . . K .
+p . . . . . . .
+P . . k . . . .
+. . . . . . . .
+. . . . . r . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): f3f8
+New FEN position: 5r2/6K1/p7/P2k4/8/8/8/8 w - - 0 38
+
+Current Board Position:
+----------------------
+. . . . . r . .
+. . . . . . K .
+p . . . . . . .
+P . . k . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): g7f8
+New FEN position: 5K2/8/p7/P2k4/8/8/8/8 b - - 0 38
+
+Current Board Position:
+----------------------
+. . . . . K . .
+. . . . . . . .
+p . . . . . . .
+P . . k . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): d5c6
+New FEN position: 5K2/8/p1k5/P7/8/8/8/8 w - - 1 39
+
+Current Board Position:
+----------------------
+. . . . . K . .
+. . . . . . . .
+p . k . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): f8g8
+New FEN position: 6K1/8/p1k5/P7/8/8/8/8 b - - 2 39
+
+Current Board Position:
+----------------------
+. . . . . . K .
+. . . . . . . .
+p . k . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): c6d7
+New FEN position: 6K1/3k4/p7/P7/8/8/8/8 w - - 3 40
+
+Current Board Position:
+----------------------
+. . . . . . K .
+. . . k . . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): g8f7
+New FEN position: 8/3k1K2/p7/P7/8/8/8/8 b - - 4 40
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . k . K . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): d7c8
+New FEN position: 2k5/5K2/p7/P7/8/8/8/8 w - - 5 41
+
+Current Board Position:
+----------------------
+. . k . . . . .
+. . . . . K . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): f7e7
+New FEN position: 2k5/4K3/p7/P7/8/8/8/8 b - - 6 41
+
+Current Board Position:
+----------------------
+. . k . . . . .
+. . . . K . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): c8b7
+New FEN position: 8/1k2K3/p7/P7/8/8/8/8 w - - 7 42
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. k . . K . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): e7e8
+New FEN position: 4K3/1k6/p7/P7/8/8/8/8 b - - 8 42
+
+Current Board Position:
+----------------------
+. . . . K . . .
+. k . . . . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): b7b8
+New FEN position: 1k2K3/8/p7/P7/8/8/8/8 w - - 9 43
+
+Current Board Position:
+----------------------
+. k . . K . . .
+. . . . . . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): e8d8
+New FEN position: 1k1K4/8/p7/P7/8/8/8/8 b - - 10 43
+
+Current Board Position:
+----------------------
+. k . K . . . .
+. . . . . . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): b8b7
+New FEN position: 3K4/1k6/p7/P7/8/8/8/8 w - - 11 44
+
+Current Board Position:
+----------------------
+. . . K . . . .
+. k . . . . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): d8e7
+New FEN position: 8/1k2K3/p7/P7/8/8/8/8 b - - 12 44
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. k . . K . . .
+p . . . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): b7c6
+New FEN position: 8/4K3/p1k5/P7/8/8/8/8 w - - 13 45
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . K . . .
+p . k . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): e7e8
+New FEN position: 4K3/8/p1k5/P7/8/8/8/8 b - - 14 45
+
+Current Board Position:
+----------------------
+. . . . K . . .
+. . . . . . . .
+p . k . . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): c6d6
+New FEN position: 4K3/8/p2k4/P7/8/8/8/8 w - - 15 46
+
+Current Board Position:
+----------------------
+. . . . K . . .
+. . . . . . . .
+p . . k . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): e8d8
+New FEN position: 3K4/8/p2k4/P7/8/8/8/8 b - - 16 46
+
+Current Board Position:
+----------------------
+. . . K . . . .
+. . . . . . . .
+p . . k . . . .
+P . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): d6c5
+New FEN position: 3K4/8/p7/P1k5/8/8/8/8 w - - 17 47
+
+Current Board Position:
+----------------------
+. . . K . . . .
+. . . . . . . .
+p . . . . . . .
+P . k . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): d8c8
+New FEN position: 2K5/8/p7/P1k5/8/8/8/8 b - - 18 47
+
+Current Board Position:
+----------------------
+. . K . . . . .
+. . . . . . . .
+p . . . . . . .
+P . k . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): c5b5
+New FEN position: 2K5/8/p7/Pk6/8/8/8/8 w - - 19 48
+
+Current Board Position:
+----------------------
+. . K . . . . .
+. . . . . . . .
+p . . . . . . .
+P k . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): c8b7
+New FEN position: 8/1K6/p7/Pk6/8/8/8/8 b - - 20 48
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. K . . . . . .
+p . . . . . . .
+P k . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): b5a5
+New FEN position: 8/1K6/p7/k7/8/8/8/8 w - - 0 49
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. K . . . . . .
+p . . . . . . .
+k . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): b7c6
+New FEN position: 8/8/p1K5/k7/8/8/8/8 b - - 1 49
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . K . . . . .
+k . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): a5b4
+New FEN position: 8/8/p1K5/8/1k6/8/8/8 w - - 2 50
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . K . . . . .
+. . . . . . . .
+. k . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): c6d6
+New FEN position: 8/8/p2K4/8/1k6/8/8/8 b - - 3 50
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . . K . . . .
+. . . . . . . .
+. k . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): b4a3
+New FEN position: 8/8/p2K4/8/8/k7/8/8 w - - 4 51
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . . K . . . .
+. . . . . . . .
+. . . . . . . .
+k . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): d6c6
+New FEN position: 8/8/p1K5/8/8/k7/8/8 b - - 5 51
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+p . K . . . . .
+. . . . . . . .
+. . . . . . . .
+k . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): a6a5
+New FEN position: 8/8/2K5/p7/8/k7/8/8 w - - 0 52
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+. . K . . . . .
+p . . . . . . .
+. . . . . . . .
+k . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): c6c5
+New FEN position: 8/8/8/p1K5/8/k7/8/8 b - - 1 52
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+p . K . . . . .
+. . . . . . . .
+k . . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): a3b3
+New FEN position: 8/8/8/p1K5/8/1k6/8/8 w - - 2 53
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+p . K . . . . .
+. . . . . . . .
+. k . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): c5b5
+New FEN position: 8/8/8/pK6/8/1k6/8/8 b - - 3 53
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+p K . . . . . .
+. . . . . . . .
+. k . . . . . .
+. . . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 2 (as black): b3b2
+New FEN position: 8/8/8/pK6/8/8/1k6/8 w - - 4 54
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+p K . . . . . .
+. . . . . . . .
+. . . . . . . .
+. k . . . . . .
+. . . . . . . .
+----------------------
+
+Bot 1 (as white): b5a5
+New FEN position: 8/8/8/K7/8/8/1k6/8 b - - 0 54
+
+Current Board Position:
+----------------------
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+K . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. k . . . . . .
+. . . . . . . .
+----------------------
+
+Draw by insufficient material.
