@@ -128,6 +128,8 @@ def run_game_two_bots_greedy_vs_random(board: chess.Board, greedy_color: chess.C
 def prints(board):
     print_fen(board)
     print_board(board)
+    
+
 #both bots do capture move, print not only fen but also current board state for visibility
 def run_game_two_bots_greedy(board: chess.Board) -> None:
     while True:
@@ -146,6 +148,81 @@ def run_game_two_bots_greedy(board: chess.Board) -> None:
         prints(board)
         continue
 
+#min max depth 2
+"""
+Valuatino: + - 10 for capturing queen
+Pawn : + - 1
+Rook : 
+Knight: 
+Bishop:
+"""
+def choose_best_move_depth_2(board: chess.Board, bot_color: chess.Color) -> chess.Move:
+    best_score = -float('inf')
+    best_move = None
+    print("CALLED")
+    #iterate moves available to bot
+    for mv in board.legal_moves:
+        move = chess.Move.from_uci(mv.uci())
+        #bot score is positive score from bot doing move
+        bot_score = 0
+        if board.is_capture(move):
+            #queen is + 10
+            if board.piece_at(move.to_square).piece_type == 5: #queen
+                bot_score += 10
+            elif board.piece_at(move.to_square).piece_type == 1: #pawn
+                bot_score += 1
+            elif board.piece_at(move.to_square).piece_type == 4: #rook
+                bot_score += 5
+            elif board.piece_at(move.to_square).piece_type == 3: #bishop
+                bot_score += 3
+            else: #knight, 6
+                bot_score += 3
+            #score remains 0 if no capture
+        print(f"Evaluating move: {move.uci()} with bot score: {bot_score}")
+        #push move, then see opponent moves to score
+        board.push(move)
+        for opponent_mv in board.legal_moves:
+            opponent_move = chess.Move.from_uci(opponent_mv.uci())
+            opponent_score = 0
+            if board.is_capture(opponent_move):
+                #SUBTRACT score by opponent captures
+                if board.piece_at(opponent_move.to_square).piece_type == 5: #queen
+                    bot_score -= 10 
+                elif board.piece_at(opponent_move.to_square).piece_type == 1: #pawn
+                    bot_score -= 1
+                elif board.piece_at(opponent_move.to_square).piece_type == 4: #rook
+                    bot_score -= 5
+                elif board.piece_at(opponent_move.to_square).piece_type == 3: #bishop
+                    bot_score -= 3
+                else: #knight, 6
+                    bot_score -= 3
+            print(f"    Opponent evaluating move: {opponent_move.uci()} with opponent score: {opponent_score}") 
+            #update best score if needed
+            if bot_score > best_score:
+                best_score = bot_score
+                best_move = move
+        board.pop()  # Undo opponent move
+        board.pop()  # Undo bot move    
+        return best_move, best_score
+             
+"""
+IGNORE: Min-Max algorithm depth of just 2
+"""
+#TODO in progress
+# def run_game_min_max(board: chess.Board, bot_color: chess.Color) -> None:
+#     while True:
+#         if board.is_game_over():
+#             announce_game_over(board)
+#             return
+
+#         if board.turn == bot_color:
+#             mv =1 #TODO implement move chosen
+            
+#             print(f"Bot (as {side_name(bot_color)}): {mv.uci()}")
+#             board.push(mv)
+#             print_fen(board)
+#             continue
+
 def run_game(board: chess.Board, bot_color: chess.Color) -> None:
     while True:
         if board.is_game_over():
@@ -154,6 +231,7 @@ def run_game(board: chess.Board, bot_color: chess.Color) -> None:
 
         if board.turn == bot_color:
             mv = choose_bot_move(board)
+            choose_best_move_depth_2(board, bot_color)  
             print(f"Bot (as {side_name(bot_color)}): {mv.uci()}")
             board.push(mv)
             print_fen(board)
@@ -163,7 +241,7 @@ def run_game(board: chess.Board, bot_color: chess.Color) -> None:
         user_mv = prompt_user_move(board)
         board.push(user_mv)
         print_fen(board)
-      #  print_board(board)
+        print_board(board)
 
 
 def print_board(board):

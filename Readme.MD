@@ -17,6 +17,8 @@ Enter your move in FEN and go back and forth with the bot.
 After each move, the program prints the overall FEN position. The bot picks a random capture move from all legal moves, else it picks a random legal move if no capture moves remain.
 The program ends in the case of a draw or one side winning. 
 
+Example flows can be found in the examples folder, although these are simulated
+
 # Testing/Simulating Games Between Bots:
 
 testing.py contains two tests for two bots playing against each other.
