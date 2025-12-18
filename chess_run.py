@@ -357,6 +357,45 @@ def run_game_two_bots_minmax_vs_pruning(board,  min_max_color, depth_min_max, de
             move = choose_bot_move(board, alpha_beta_color, depth_alpha_beta) 
         board.push(move) 
         
+
+
+# File: /mnt/data/chess_run.py
+
+def play_polish_opening_kings_indian_sokolsky(board: chess.Board) -> None:
+    """
+      1. b4   Nf6
+      2. Bb2  g6
+      3. c4   Bg7
+      4. e3   d6
+      5. Nf3  O-O
+      6. d4
+    
+    """
+
+    uci_sequence = [
+        "b2b4",  
+        "g8f6",  
+        "c1b2",  
+        "g7g6",  
+        "c2c4",  
+        "f8g7",  
+        "e2e3",  
+        "d7d6",  
+        "g1f3",  
+        "e8g8",  
+        "d2d4",  
+    ]
+
+    for u in uci_sequence:
+        try:
+            mv = chess.Move.from_uci(u)
+        except ValueError:
+            break
+        if mv in board.legal_moves:
+            board.push(mv)
+        else:
+            break
+
     
 def main() -> None:
     print("=====================================================")
@@ -390,6 +429,8 @@ def main() -> None:
         print("Bad depth; using 2.")
         depth = 2
 
+
+    play_polish_opening_kings_indian_sokolsky(board)
     run_game(board, bot_color, depth)
 
 
