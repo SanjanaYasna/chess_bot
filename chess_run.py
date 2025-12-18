@@ -58,21 +58,21 @@ def announce_game_over(board: chess.Board) -> int:
     if board.is_checkmate():
         winner = "white" if board.turn == chess.BLACK else "black"
         print(f"Checkmate. {winner.capitalize()} wins.")
-        return 1
+        return 1, winner
     if board.is_stalemate():
         print("Draw by stalemate.")
-        return 2
+        return 2, None
     if board.is_insufficient_material():
         print("Draw by insufficient material.")
-        return 3
+        return 3, None
     if board.is_seventyfive_moves():
         print("Draw by 75-move rule.")
-        return 4
+        return 4, None
     if board.is_fivefold_repetition():
         print("Draw by fivefold repetition.")
-        return 5
+        return 5, None
     print("Game over.")
-    return 0
+    return 0, None
 
 _rng = random.Random()
 
@@ -295,7 +295,7 @@ def run_game(board: chess.Board, bot_color: chess.Color, depth: int) -> None:
 def run_game_two_bots_greedy_vs_random(board: chess.Board, greedy_color: chess.Color) -> None:
     while True:
         if board.is_game_over():
-            num_outcome = announce_game_over(board)
+            num_outcome, _ = announce_game_over(board)
             return num_outcome
         #white bot
         if board.turn == chess.WHITE:
@@ -334,7 +334,7 @@ def prints(board):
 def run_game_two_bots_greedy(board: chess.Board) -> None:
     while True:
         if board.is_game_over():
-            num_outcome = announce_game_over(board)
+            num_outcome, _ = announce_game_over(board)
             return num_outcome
         #white bot
         if board.turn == chess.WHITE:
@@ -349,8 +349,9 @@ def run_game_two_bots_minmax_vs_pruning(board,  min_max_color, depth_min_max, de
     alpha_beta_color = not min_max_color 
     while True:
         if board.is_game_over():
-            num_outcome = announce_game_over(board)
-            return num_outcome
+            num_outcome, _ = announce_game_over(board)
+            print("For the following configs", min_max_color, depth_min_max, depth_alpha_beta, " outcome is", num_outcome)
+            return num_outcome, _
         if board.turn == min_max_color:
             move = minmax_choose_bot_move(board, min_max_color, depth_min_max) 
         else:

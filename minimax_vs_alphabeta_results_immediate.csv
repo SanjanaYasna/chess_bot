@@ -1,0 +1,4 @@
+minimax_color,alphabeta_color,depth_minimax,depth_alphabeta,outcome
+white,black,3,3,checkmate,white
+white,black,3,3,checkmate,white
+white,black,3,3,checkmate,white
