@@ -76,6 +76,7 @@ def announce_game_over(board: chess.Board) -> int:
 
 _rng = random.Random()
 
+
 def choose_bot_move_capture_pref(board: chess.Board) -> chess.Move:
     legal = list(board.legal_moves)
     if not legal:
@@ -152,9 +153,67 @@ def order_moves(board: chess.Board) -> list[chess.Move]:
     moves.sort(key=key, reverse=True)
     return moves
 
+# --- regular min and max algorithm WITHOUT alpha-beta pruning
+# Source pseudocode: https://www.chessprogramming.org/Minimax
+def min_value(board, depth, bot_color):
+    if depth ==0 or board.is_game_over():
+        #if game over mate score returned
+        if board.is_checkmate():
+            return (-MATE_SCORE if board.turn == bot_color else MATE_SCORE), None
+        return 0, None
+    best_score = 10**9
+    best_move = None
+    for move in order_moves(board):
+        reward = immediate_reward(board, move, bot_color) 
+        board.push(move) 
+        child_score, _= min_value(board, depth -1, bot_color) 
+        board.pop() #remove to avoid future illegal moves 
+        #check reward at current depth + one above
+        total = reward + child_score
+        #update if best_score min found with this possibility
+        if total < best_score:
+            best_score, best_move = total, move
+    return best_score, best_move
+
+def max_value(board, depth, bot_color):
+    if depth ==0 or board.is_game_over():
+        #if game over mate score returned
+        if board.is_checkmate():
+            return (-MATE_SCORE if board.turn == bot_color else MATE_SCORE), None
+        return 0, None
+    best_score = -10**9
+    best_move = None 
+    for move in order_moves(board):
+        reward = immediate_reward(board, move, bot_color) 
+        board.push(move) 
+        child_score, _ = min_value(board, depth -1, bot_color)  
+        board.pop()
+        #check reward at current depth + one above
+        total = reward + child_score
+        #update if best_score exceeded with this possibility
+        if total > best_score:
+            best_score, best_move = total, move
+    return best_score, best_move
+
+def min_max_search(board, depth, bot_color): 
+    if board.turn == bot_color:
+        #alternate between min and max strategy by bot color
+        return max_value(board, depth, bot_color)
+    return min_value(board, depth, bot_color)
+
+#same as choose_bot_move except we call minmax instead of search (alpha-beta pruning)
+def minmax_choose_bot_move(board, bot_color, depth): 
+    if depth <= 0:
+        return choose_bot_move_capture_pref(board) 
+    _, move = min_max_search(board, depth, bot_color )
+    if move is None:
+        return choose_bot_move_capture_pref(board) 
+    return move
+#-----------
 
 def search(board: chess.Board, depth: int, alpha: int, beta: int, bot_color: chess.Color) -> Tuple[int, Optional[chess.Move]]:
     """Alpha-beta minimax that sums rewards along the path for bot_color."""
+    #first check game enders
     if depth == 0 or board.is_game_over():
         if board.is_checkmate():
             return (-MATE_SCORE if board.turn == bot_color else MATE_SCORE), None
@@ -162,22 +221,31 @@ def search(board: chess.Board, depth: int, alpha: int, beta: int, bot_color: che
 
     maximizing = (board.turn == bot_color)
     best_move: Optional[chess.Move] = None
-
+    #MAXIMIZING
+    #iteratively increasing lower bound (alpha)
     if maximizing:
+        #start with min best_score
         best_score = -10**9
         for mv in order_moves(board):
+            #compute advantage of move
             imm = immediate_reward(board, mv, bot_color)
             board.push(mv)
+            #compute best of future moves, up to depth calls
             child_score, _ = search(board, depth - 1, alpha, beta, bot_color)
             board.pop()
+            #undo these moves and get the total advantage score 
             total = imm + child_score
             if total > best_score or (total == best_score and _rng.random() < 0.5):
                 best_score, best_move = total, mv
+            #update alpha (lower bound) with best_score if exceeded, iteratively increasing alpha as you make moves
             alpha = max(alpha, best_score)
+            #beta is upper boud, so can't be less than alpha
             if beta <= alpha:
                 break
         return best_score, best_move
     else:
+        #MINIMIZING
+        #iteratively decreasing upper bound (beta)
         best_score = 10**9
         for mv in order_moves(board):
             imm = immediate_reward(board, mv, bot_color)
@@ -193,8 +261,9 @@ def search(board: chess.Board, depth: int, alpha: int, beta: int, bot_color: che
         return best_score, best_move
 
 
+#calls alphabeta pruning minmax by default
 def choose_bot_move(board: chess.Board, bot_color: chess.Color, depth: int) -> chess.Move:
-    """Depth=0 → capture-pref/random; otherwise minimax."""
+    """Depth=0 → capture-pref/random; otherwise minimax with alpha-beat."""
     if depth <= 0:
         return choose_bot_move_capture_pref(board)
     _, mv = search(board, depth, -10**9, 10**9, bot_color)
@@ -222,7 +291,73 @@ def run_game(board: chess.Board, bot_color: chess.Color, depth: int) -> None:
         board.push(user_mv)
         print_fen(board)
 
+#bot prioritizing capture vs bot that just plays randomly
+def run_game_two_bots_greedy_vs_random(board: chess.Board, greedy_color: chess.Color) -> None:
+    while True:
+        if board.is_game_over():
+            num_outcome = announce_game_over(board)
+            return num_outcome
+        #white bot
+        if board.turn == chess.WHITE:
+            if greedy_color != chess.WHITE:
+                legal = list(board.legal_moves)
+                if not legal:
+                    raise RuntimeError("No legal moves available.")
+                mv = random.choice(legal)
+                print(f"Bot 1, any legal move (as white): {mv.uci()}")
+                board.push(mv)
+            else:
+                #if it is greedy, it choosees the capture moves specificially
+                mv = choose_bot_move(board)
+                print(f"Bot 1, prioritizes capture (as white): {mv.uci()}")
+                board.push(mv)
+        else:
+            if greedy_color != chess.BLACK:
+                legal = list(board.legal_moves)
+                if not legal:
+                    raise RuntimeError("No legal moves available.")
+                mv = random.choice(legal)
+                print(f"Bot 2, any legal move (as black): {mv.uci()}")
+                board.push(mv)
+            else:
+                mv = choose_bot_move(board)
+                print(f"Bot 2, prioritizes capture (as black): {mv.uci()}")
+                board.push(mv)
+        prints(board)
+        continue
 
+def prints(board):
+    print_fen(board)
+    print_board(board)
+
+#both bots do capture move, print not only fen but also current board state for visibility
+def run_game_two_bots_greedy(board: chess.Board) -> None:
+    while True:
+        if board.is_game_over():
+            num_outcome = announce_game_over(board)
+            return num_outcome
+        #white bot
+        if board.turn == chess.WHITE:
+            mv = choose_bot_move(board)
+            print(f"Bot 1 (as white): {mv.uci()}")
+
+"""
+This function pits a bot using min max vs a bot using alpha-beta pruning to their min-max strategy
+You can set the colors yourself
+"""
+def run_game_two_bots_minmax_vs_pruning(board,  min_max_color, depth_min_max, depth_alpha_beta): 
+    alpha_beta_color = not min_max_color 
+    while True:
+        if board.is_game_over():
+            num_outcome = announce_game_over(board)
+            return num_outcome
+        if board.turn == min_max_color:
+            move = minmax_choose_bot_move(board, min_max_color, depth_min_max) 
+        else:
+            move = choose_bot_move(board, alpha_beta_color, depth_alpha_beta) 
+        board.push(move) 
+        
+    
 def main() -> None:
     print("=====================================================")
     print("             CS 290 Chess Bot Version 0.2            ")

@@ -15,6 +15,7 @@ def make_new_board(pos: str = None) -> chess.Board:
     return board
 
 
+
 #call run_game_two_bots_greedy_vs_random which is a bot that prioritizes capture moves (greedy) vs a bot that plays random legal moves, 
 #greedy bot chosen by color argument
 def test_greedy_random_bot():
