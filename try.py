@@ -31,7 +31,7 @@ def _run_single_match(job_args):
 
 
 def run_all_minimax_vs_pruning_experiments(
-    output_path=  "minimax_vs_alphabeta_results_immediate.csv",
+    output_path=  "minimax_vs_alphabeta_results_immediate_pt2.csv",
 ) -> None:
     jobs = []
 
@@ -41,16 +41,18 @@ def run_all_minimax_vs_pruning_experiments(
             jobs.append((color, depth_minimax, depth_alphabeta))
 
     #100 jobs total
-    add_jobs(chess.WHITE, 3, 3, 10)
-    add_jobs(chess.BLACK, 3, 3, 10)
-    add_jobs(chess.WHITE, 2, 4, 10)
-    add_jobs(chess.BLACK, 2, 4, 10)
-    add_jobs(chess.WHITE, 4, 2, 10)
-    add_jobs(chess.BLACK, 4, 2, 10)
-    add_jobs(chess.BLACK, 4, 5, 10)
-    add_jobs(chess.BLACK, 5, 4, 10)
-    add_jobs(chess.WHITE, 4, 5, 10)
-    add_jobs(chess.WHITE, 5, 4, 10)
+    # add_jobs(chess.WHITE, 3, 3, 10)
+    # add_jobs(chess.BLACK, 3, 3, 10)
+    # add_jobs(chess.WHITE, 2, 4, 10)
+    # add_jobs(chess.BLACK, 2, 4, 10)
+    # add_jobs(chess.WHITE, 4, 2, 10)
+    # add_jobs(chess.BLACK, 4, 2, 10)
+    # add_jobs(chess.BLACK, 4, 5, 10)
+    # add_jobs(chess.BLACK, 5, 4, 10)
+    # add_jobs(chess.WHITE, 4, 5, 10)
+    # add_jobs(chess.WHITE, 5, 4, 10)
+    add_jobs(chess.WHITE, 5, 5, 10)
+    add_jobs(chess.BLACK, 5, 5, 10)
     #run on at a time
     with open(output_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile)
