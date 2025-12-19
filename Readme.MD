@@ -26,6 +26,6 @@ python chess_run.py
 - **`testing_openings.py`** – Helper for testing bots from specific opening positions (uses opening FENs and runs greedy-vs-random or greedy-vs-greedy checks). 
 ### Results 
 - **`minimax_vs_alphabeta_results*.csv`** – Output datasets produced by the experiment scripts (see `min_max_ab_test.py` and `min_max_ab_test_opening.py` for the exact columns and default output filenames). 
-- **`results_table_ab_minmax.tex`**, **`minmax_ab_results.tex`** – LaTeX tables used in the written report to summarize experiment outcomes (generated/assembled from the CSV results).
-- **`minmax_ab.txt`** – Run log captured from a batch/cluster execution (e.g., SLURM output / time-limit cancellation message). 
+- **`results_table_ab_minmax.tex`**, **`minmax_ab_results.tex`** – LaTeX tables used in the written report to summarize experiment outcomes (assembled from the CSV results).
+
 
