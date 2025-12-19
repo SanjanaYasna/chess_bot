@@ -3,8 +3,13 @@ import multiprocessing as mp
 from chess_run import *
 from testing_openings import *
 
+import sys
+import random
+from datetime import datetime
+from typing import Optional, Tuple
+import chess
+import os
 
-# File: /mnt/data/chess_run.py
 
 # Opening positions after the specified lines are played (from standard start).
 OPENING_FENS = {
@@ -47,8 +52,8 @@ OUTCOME_LABELS = {
 
 def _run_single_match(job_args):
     minimax_color, depth_minimax, depth_alphabeta = job_args
-    board = choose_opening_and_make_board(1)
-    outcome = run_game_two_bots_minmax_vs_pruning(
+    board = choose_opening_and_make_board(3)
+    outcome, winner = run_game_two_bots_minmax_vs_pruning(
         board,
         minimax_color,
         depth_minimax,
@@ -60,11 +65,12 @@ def _run_single_match(job_args):
         depth_minimax,
         depth_alphabeta,
         outcome_label,
+        winner
     )
 
 
 def run_all_minimax_vs_pruning_experiments(
-    output_path: str = "minimax_vs_alphabeta_results_opening.csv",
+    output_path=  "minimax_vs_alphabeta_results_opening_pt3.csv",
 ) -> None:
     jobs = []
 
@@ -73,25 +79,39 @@ def run_all_minimax_vs_pruning_experiments(
         for _ in range(count):
             jobs.append((color, depth_minimax, depth_alphabeta))
 
-    #30 jobs total
-    add_jobs(chess.WHITE, 3, 3, 3)
-    add_jobs(chess.BLACK, 3, 3, 3)
-    add_jobs(chess.WHITE, 2, 4, 3)
-    add_jobs(chess.BLACK, 2, 4, 3)
-    add_jobs(chess.WHITE, 4, 2, 3)
-    add_jobs(chess.BLACK, 4, 2, 3)
+    #100 jobs total
+    # add_jobs(chess.WHITE, 3, 3, 10)
+    # add_jobs(chess.BLACK, 3, 3, 10)
+    # add_jobs(chess.WHITE, 2, 4, 10)
+    # add_jobs(chess.BLACK, 2, 4, 10)
+    # add_jobs(chess.WHITE, 4, 2, 10)
+    # add_jobs(chess.BLACK, 4, 2, 10)
+    # add_jobs(chess.BLACK, 4, 5, 10)
+    # add_jobs(chess.BLACK, 5, 4, 10)
+    # add_jobs(chess.WHITE, 4, 5, 10)
+    # add_jobs(chess.WHITE, 5, 4, 10)
+    add_jobs(chess.WHITE, 2, 2, 10)
+    add_jobs(chess.BLACK, 2, 3, 10)
+    add_jobs(chess.WHITE, 2, 3, 10)
     #run on at a time
-    with mp.Pool() as pool:
-        results = pool.map(_run_single_match, jobs)
-
     with open(output_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(
-            ["minimax_color", "alphabeta_color", "depth_minimax", "depth_alphabeta", "outcome"]
+            ["minimax_color", "alphabeta_color", "depth_minimax", "depth_alphabeta", "outcome", "winner"]
         )
-        for color, depth_minimax, depth_alphabeta, outcome_label in results:
-            alphabeta_color = "white" if color == "black" else "black"
-            writer.writerow([color, alphabeta_color, depth_minimax, depth_alphabeta, outcome_label])
-    
+        csvfile.flush()
+        os.fsync(csvfile.fileno())
+
+        # Stream results as they arrive
+        with mp.Pool() as pool:
+            for color, depth_minimax, depth_alphabeta, outcome_label, winner in pool.imap(
+                _run_single_match, jobs, chunksize=1
+            ):
+                alphabeta_color = "white" if color == "black" else "black"
+                writer.writerow([color, alphabeta_color, depth_minimax, depth_alphabeta, outcome_label, winner])
+                # ensure the row is flushed to disk immediately
+                csvfile.flush()
+                os.fsync(csvfile.fileno())
+
 if __name__ == "__main__":
     run_all_minimax_vs_pruning_experiments()
