@@ -7,23 +7,26 @@ Cd into the chess_bot directory , then run..
 python chess_run.py
 ```
 
-# Game flow:
+## Project files (what each file does)
 
-The bot starts by asking for the player's choice for whether the bot plays black or write. Enter w for white, b for black. 
-Then, you can feed a starting FEN position, or hit enter for the default starting position. 
+### Core gameplay 
+- **`chess_run.py`** – Main engine and interactive game runner. Implements:
+  - baseline move-pickers (capture-preferred vs purely random) and game loops (human vs bot; bot vs bot). :contentReference[oaicite:0]{index=0}
+  - **Minimax** and **alpha–beta pruning** search, using a simple “immediate reward” evaluation and lightweight move ordering (checks/captures/promotions first). :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2}
+  - outcome detection (checkmate/stalemate/insufficient material/75-move rule/fivefold repetition). :contentReference[oaicite:3]{index=3}
 
-Enter your move in FEN and go back and forth with the bot.
+### Experiments 
+- **`min_max_ab_test.py`** – Runs batches of bot-vs-bot games from the standard starting position to compare minimax vs alpha–beta at different depths. Uses multiprocessing and writes results to a CSV (columns include `minimax_color`, `alphabeta_color`, `depth_minimax`, `depth_alphabeta`, `outcome`). :contentReference[oaicite:4]{index=4}
 
-After each move, the program prints the overall FEN position. The bot picks a random capture move from all legal moves, else it picks a random legal move if no capture moves remain.
-The program ends in the case of a draw or one side winning. 
+- **`min_max_ab_test_opening.py`** – Same idea as `min_max_ab_test.py`, but starts from a selected **opening FEN** (e.g., Queen’s Gambit / Sicilian Dragon / Polish Opening) and records both `outcome` and `winner`. It also flushes results immediately to disk while matches run. :contentReference[oaicite:5]{index=5} :contentReference[oaicite:6]{index=6}
 
-Example flows can be found in the examples folder, although these are simulated
+### Local test 
+- **`testing.py`** – Small, fast sanity tests. Includes a helper to create a board from a given FEN (or default start) and then run quick bot-vs-bot checks. :contentReference[oaicite:7]{index=7}
 
-# Testing/Simulating Games Between Bots:
+- **`testing_openings.py`** – Helper for testing bots from specific opening positions (uses opening FENs and runs greedy-vs-random or greedy-vs-greedy checks). :contentReference[oaicite:8]{index=8} :contentReference[oaicite:9]{index=9}
 
-testing.py contains two tests for two bots playing against each other.
-
-test_both_greedy_bots() tests two bots that both prioritize capture moves against each other. As you'd imagine, there is a very high chance they run into a stalemate due to insufficient material, and we assert that this is the outcome. Example outcome in examples/two_greedy_bots.txt
-
-test_greedy_random_bot() has one bot prioritize capture (we call greedy), the other select any legal move. This one has a wider range of likely outcome, but usually the bot that captures then checkmates. Example outcome where first game black is greedy, next game white is greedy is in examples/one_greedy_other_random_bots.txt
+### Results 
+- **`minimax_vs_alphabeta_results*.csv`** – Output datasets produced by the experiment scripts (see `min_max_ab_test.py` and `min_max_ab_test_opening.py` for the exact columns and default output filenames). :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11}
+- **`results_table_ab_minmax.tex`**, **`minmax_ab_results.tex`** – LaTeX tables used in the written report to summarize experiment outcomes (generated/assembled from the CSV results).
+- **`minmax_ab.txt`** – Run log captured from a batch/cluster execution (e.g., SLURM output / time-limit cancellation message). :contentReference[oaicite:12]{index=12}
 
