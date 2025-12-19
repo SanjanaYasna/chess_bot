@@ -2,3 +2,4 @@ No conda package cache directories found outside your home directory. To
 prevent conda from filling up your home directory, you can create a new
 directory at `/work/pi_<your_pi_name>/$USER/.conda/pkgs` and reload the module. 
 Loading conda version miniforge3-24.7.1
+slurmstepd-cpu023: error: *** JOB 50617065 ON cpu023 CANCELLED AT 2025-12-18T22:36:16 DUE TO TIME LIMIT ***
